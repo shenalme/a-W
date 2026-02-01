@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&W Car Service | Professional Car Care & Tyres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Bebas+Neue&display=swap');
+
+        :root {
+            --brand-gold: #fbbf24; /* Matching the gold in the A&W logo */
+            --brand-black: #0f172a;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        .font-heading {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(251, 191, 36, 0.1);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            color: var(--brand-gold);
+        }
+
+        .hero-pattern {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1562141989-c5c79ac8f576?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+        }
+
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 border-2 border-amber-400 rounded-full flex items-center justify-center font-bold text-amber-400">
+                    A&W
+                </div>
+                <span class="text-xl font-heading tracking-widest text-white">CAR SERVICE</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold tracking-widest uppercase">
+                <a href="#home" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="#services" class="hover:text-amber-400 transition-colors">Services</a>
+                <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+            </div>
+            <a href="tel:0123456789" class="hidden sm:block bg-amber-400 text-black px-6 py-2 rounded-full font-bold hover:bg-amber-300 transition-all">
+                CALL NOW
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern h-screen flex items-center px-6 relative">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <div class="inline-block bg-amber-400/20 text-amber-400 px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] mb-6 uppercase">
+                    Premium Car Care Cardiff
+                </div>
+                <h1 class="text-6xl md:text-8xl font-heading leading-none mb-6">
+                    Professional <br> <span class="gold-text-gradient">Service</span> For Your Car
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                    From precision tyre fitting to expert servicing and detailing. We keep your vehicle running smooth and looking pristine.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-amber-400 text-black px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform">
+                        OUR SERVICES <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#contact" class="bg-white/5 border border-white/10 backdrop-blur-sm px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">
+                        FIND US
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-heading mb-4">What We Do</h2>
+                <div class="h-1 w-20 bg-amber-400 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tyres -->
+                <div class="service-card p-10 bg-zinc-900/50 border border-white/5 rounded-[2rem] hover:border-amber-400/30 transition-all reveal">
+                    <i data-lucide="disc" class="service-icon w-12 h-12 text-gray-500 mb-6 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase font-heading tracking-wider">New & Part Worn Tyres</h3>
+                    <p class="text-gray-400 leading-relaxed">Top-quality tyre brands and budget-friendly part-worn options, expertly fitted and balanced.</p>
+                </div>
+
+                <!-- Cleaning -->
+                <div class="service-card p-10 bg-zinc-900/50 border border-white/5 rounded-[2rem] hover:border-amber-400/30 transition-all reveal" style="transition-delay: 100ms;">
+                    <i data-lucide="droplets" class="service-icon w-12 h-12 text-gray-500 mb-6 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase font-heading tracking-wider">Professional Cleaning</h3>
+                    <p class="text-gray-400 leading-relaxed">Comprehensive detailing and wash services that restore your car's showroom shine inside and out.</p>
+                </div>
+
+                <!-- Servicing -->
+                <div class="service-card p-10 bg-zinc-900/50 border border-white/5 rounded-[2rem] hover:border-amber-400/30 transition-all reveal" style="transition-delay: 200ms;">
+                    <i data-lucide="settings" class="service-icon w-12 h-12 text-gray-500 mb-6 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase font-heading tracking-wider">Full Servicing</h3>
+                    <p class="text-gray-400 leading-relaxed">Maintenance checks, oil changes, and full vehicle health reports to keep you safe on the road.</p>
+                </div>
+
+                <!-- Brakes -->
+                <div class="service-card p-10 bg-zinc-900/50 border border-white/5 rounded-[2rem] hover:border-amber-400/30 transition-all reveal" style="transition-delay: 300ms;">
+                    <i data-lucide="activity" class="service-icon w-12 h-12 text-gray-500 mb-6 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase font-heading tracking-wider">Discs & Pads Change</h3>
+                    <p class="text-gray-400 leading-relaxed">Precision brake repairs and replacements using high-quality components for maximum stopping power.</p>
+                </div>
+
+                <!-- Battery -->
+                <div class="service-card p-10 bg-zinc-900/50 border border-white/5 rounded-[2rem] hover:border-amber-400/30 transition-all reveal" style="transition-delay: 400ms;">
+                    <i data-lucide="battery-charging" class="service-icon w-12 h-12 text-gray-500 mb-6 transition-transform"></i>
+                    <h3 class="text-2xl font-bold mb-4 uppercase font-heading tracking-wider">Battery & Diagnostics</h3>
+                    <p class="text-gray-400 leading-relaxed">Testing and replacement of batteries along with computerized diagnostics for modern vehicles.</p>
+                </div>
+
+                <!-- Custom -->
+                <div class="service-card p-10 bg-amber-400 rounded-[2rem] flex flex-col justify-center items-center text-center text-black reveal" style="transition-delay: 500ms;">
+                    <h3 class="text-3xl font-heading mb-4 leading-tight">Need Something Else?</h3>
+                    <p class="font-bold mb-6">Call us for a custom quote!</p>
+                    <a href="tel:07300335490" class="bg-black text-white px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split About/Image Section -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative reveal">
+                <div class="aspect-video rounded-3xl overflow-hidden border-4 border-amber-400/20 gold-glow">
+                    <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=800" alt="Work Process" class="w-full h-full object-cover">
+                </div>
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-6 -right-6 bg-amber-400 text-black p-8 rounded-2xl shadow-2xl hidden md:block">
+                    <p class="font-heading text-4xl leading-none">100%</p>
+                    <p class="font-bold text-xs uppercase tracking-widest">Quality <br> Guarantee</p>
+                </div>
+            </div>
+            <div class="reveal">
+                <h2 class="text-4xl md:text-5xl font-heading mb-6">Experienced <br> Mechanical Experts</h2>
+                <p class="text-gray-400 mb-8 text-lg">
+                    At A&W Car Service, we pride ourselves on transparency and technical excellence. Located at Unit 2, we have built a reputation for providing high-quality parts and workmanship at competitive prices.
+                </p>
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="check-circle" class="text-amber-400 w-5 h-5"></i>
+                        <span class="font-semibold tracking-wide">Same-day tyre fitting</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="check-circle" class="text-amber-400 w-5 h-5"></i>
+                        <span class="font-semibold tracking-wide">Expert mechanical team</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="check-circle" class="text-amber-400 w-5 h-5"></i>
+                        <span class="font-semibold tracking-wide">Premium detailing products</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-zinc-900/50 rounded-[3rem] overflow-hidden border border-white/5 grid lg:grid-cols-5">
+                <div class="lg:col-span-2 p-12 lg:p-16">
+                    <h2 class="text-4xl font-heading mb-8">Get In Touch</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 shrink-0">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Our Location</h4>
+                                <p class="text-gray-400">Unit 2, Cardiff <br> (Check our sign for exact street details!)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 shrink-0">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Phone</h4>
+                                <p class="text-gray-400">Available via the number on our storefront</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-amber-400 shrink-0">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Business Hours</h4>
+                                <p class="text-gray-400">Mon - Sat: 9:00 AM - 6:00 PM <br> Sun: By Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visual Map Placeholder / Image -->
+                <div class="lg:col-span-3 h-[400px] lg:h-full relative">
+                    <img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover" alt="Garage Interior">
+                    <div class="absolute inset-0 bg-amber-400/10 mix-blend-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <div class="w-8 h-8 border border-amber-400 rounded-full flex items-center justify-center text-amber-400 font-bold text-xs">A&W</div>
+                <span class="text-lg font-heading tracking-widest text-white">A&W CAR SERVICE</span>
+            </div>
+            <p>&copy; 2024 A&W Car Service. All Rights Reserved. Cardiff's Tyre & Cleaning Experts.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Reveal Animation logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth nav bg change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.padding = '10px 0';
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.style.padding = '0';
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+    </script>
+</body>
+</html>
